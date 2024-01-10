@@ -1,0 +1,8 @@
+---
+  export const partial = true;
+  const page = Astro.url
+  import Greeting from "../../components/Greeting";
+  
+---
+<div>page {page}</div>
+<Greeting client:load messages={["1","2","3"]}></Greeting>

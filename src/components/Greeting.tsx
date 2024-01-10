@@ -1,9 +1,9 @@
 import { useState } from 'preact/hooks';
+import "../styles/global.css"
 
-export default function Greeting({messages}) {
-
+export default function Greeting({messages}:{messages:string[]}) {
+  
   const randomMessage = () => messages[(Math.floor(Math.random() * messages.length))];
-
   const [greeting, setGreeting] = useState(messages[0]);
 
   return (
