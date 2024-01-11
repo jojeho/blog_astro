@@ -8,8 +8,8 @@ import Layout from "../layouts/Layout.astro"
         <a 
             href="#" 
             hx-get={`/partials/list?page=${page}`}
-            hx-vals={`{page=${page}}`}
             hx-target="#contents"
+            hx-params="*"
           
         >{page}</a>
     ))}

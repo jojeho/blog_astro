@@ -1,8 +1,15 @@
 import { defineConfig } from 'astro/config';
-
 import preact from "@astrojs/preact";
-import htmx from "astro-htmx"
+import htmx from "astro-htmx";
+import node from "@astrojs/node";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [preact() ,htmx()]
+    output: "hybrid",
+  integrations: [preact(), htmx()],
+  adapter: node({
+   mode: "standalone"
+   })
+  ,
+
 });

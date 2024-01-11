@@ -1,6 +1,6 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
-title: '내 첫번째 블로그'
+Greeting: ../../components/Greeting.tsx
+title: 한글
 pubDate: 2022-07-01
 description: 'This is the first post of my new Astro blog.'
 author: jjh
@@ -23,3 +23,4 @@ tags: ["astro", "blogging", "learning in public"]
 ## What's next
 
 Astro 학습 과정을 완성하고 새로운 포스트를 만들 겠습니다. 
+
