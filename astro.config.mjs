@@ -4,7 +4,7 @@ import htmx from "astro-htmx";
 import node from "@astrojs/node";
 import netlify from '@astrojs/netlify';
 
-// https://astro.build/config
+
 export default defineConfig({
   output: "hybrid",
   integrations: [preact(), htmx()],
@@ -12,5 +12,5 @@ export default defineConfig({
    mode: "standalone"
    })
   ,
-  adapter: netlify(),
+    adapter: netlify(),
 });
