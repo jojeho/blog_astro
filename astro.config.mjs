@@ -6,7 +6,7 @@ import netlify from '@astrojs/netlify';
 
 
 export default defineConfig({
-  output: "server",
+  output: "hybrid",
   integrations: [preact(), htmx()],
   adapter: node({
    mode: "standalone"
