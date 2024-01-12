@@ -1,10 +1,55 @@
 ---
   import Greeting from "../../components/Greeting";
   
+  import { css , cva } from '../../../styled-system/css';
+  import { flex , vstack ,hstack } from "../../../styled-system/patterns";
   const page=Astro.url.searchParams.get("page")
   export const partial = true;  
+  const buttonc = cva({
+  base: {
+    display: 'flex',
+    flexDir: 'column' ,
+    gap : 5,
 
+
+  },
+  
+  variants: {
+    visual: {
+      solid: { bg: 'red.500', color: 'white' },
+      outline: { borderWidth: '1px', borderColor: 'red.200' }
+    },
+    size: {
+      sm: { padding: '4', fontSize: '12px' },
+      lg: { padding: '8', fontSize: '24px' }
+    }
+  }
+})
+  
+let b1 =buttonc({ visual: 'solid', size: 'lg' })
+let b2 =buttonc({ visual: 'outline', size: 'sm' })
+let url ="favicon.svg"
+if(page =="1")
+{
+  b1 =b2;
+  url="" 
+}
 ---
-<div>my :{page}</div>
+<div class="aa" >my :{page}</div>
+<div class={hstack({ gap: '2' })} >
+  <div>c</div>
+  <div>a</div>
+  <img src={url}/>
+  <button class={b1}><span>aa</span><span>c</span></button>
+</div>
+<div class={css({ fontSize: "md", fontWeight: 'bold' , color:'blue' })}>Hello !</div>
+
 {page =="1" ? <Greeting client:load messages={["1","2","3"]}></Greeting>:<div></div>}
+
+<style>
+  .aa {
+    color:blue;
+    background:blueviolet;
+  }
+</style>
 

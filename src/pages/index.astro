@@ -4,11 +4,13 @@ import Layout from '../layouts/Layout.astro';
 const pageTitle="JJH 바뀜";
 import Greeting  from '../components/Greeting';
 import CounterComp from './partials/CounterComp.astro';
-
+import { css } from '../../styled-system/css';
 ---
 
 <Layout title="Welcome to Astro.">
-      	  
+	<div class={css({ fontSize: "md", fontWeight: 'bold' , color:'blue' })}>Hello !</div>
+  	<div >
+
 		<h1>{pageTitle}</h1>
 
 		<ul>
@@ -16,6 +18,7 @@ import CounterComp from './partials/CounterComp.astro';
 			<li><a href="/posts/post-2/">Post 2</a></li>
 			<li><a href="/posts/post-3/">Post 3</a></li>
 	  </ul>
+	</div>
 
 	  <CounterComp ></CounterComp>
 	 

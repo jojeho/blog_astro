@@ -1,13 +1,18 @@
 ---
+// src/components/react.jsx
+
+
+import { ViewTransitions } from 'astro:transitions';
 import Navigation  from "./Navigation.astro";
 import ThemeIcon from './ThemeIcon.astro';
 ---
-
+<ViewTransitions   />
 <div class="hamburger">
     <span class="line"></span>
     <span class="line"></span>
     <span class="line"></span>
   </div>
 <ThemeIcon></ThemeIcon>
-<Navigation>
+
+<Navigation  >
 </Navigation>

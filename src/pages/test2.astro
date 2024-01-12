@@ -1,0 +1,14 @@
+---
+export const prerender = false;
+// imports all files that end with `.astro` in `./src/components/`
+// const components = await Astro.glob('../components/ap/*.astro');
+const components = await Astro.glob('../content/posts/*.md');
+console.log(components.map((item)=>item))
+
+---
+<!-- Display all of our components -->
+{components.map((component) => (
+  <div>
+    <component.default  ></component>
+  </div>
+))}

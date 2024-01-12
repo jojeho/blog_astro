@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro"
 
 ---
 <Layout title="search">
+
     <div>Page</div>
     {[1, 2, 3].map((page) => (
         <a 
@@ -10,6 +11,7 @@ import Layout from "../layouts/Layout.astro"
             hx-get={`/partials/list?page=${page}`}
             hx-target="#contents"
             hx-params="*"
+            hx-boost="true"
           
         >{page}</a>
     ))}
@@ -18,13 +20,7 @@ import Layout from "../layouts/Layout.astro"
   aaaa
 </div>
 
+<style>
 
+</style>
 
-
-  </Layout>
-
-  <style>
-    .ab {
-      color:red
-    }
-  </style>
